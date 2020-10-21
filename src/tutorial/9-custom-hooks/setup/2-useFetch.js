@@ -14,6 +14,12 @@ export const useFetch = (url) => {
     setLoading(false);
   };
 
+  /* getProducts must not be on dependency array
+  but its included when save it by Lint 
+  SOLUTION: add useCallback to getProducts function
+  as stated on Final folder
+  */
+
   // useEffect(() => {
   //   getProducts();
   // }, [getProducts, url]);
